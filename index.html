@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portada Moodle</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    /* ==================================================
+       VARIABLES POR CURSO (OPCIÓN B)
+       ================================================== */
+
+    .curso-base {
+      --fondo-desktop: url("IMAGENES/AA_INFANTIL_Repensar_Paradas_fondo 1000.jpg");
+      --fondo-mobile: url("IMAGENES/AA_INFANTIL_Repensar_Paradas_fondo 1000.jpg");
+    
+      --orientaciones-top: 6%;
+      --orientaciones-right: 76%;
+
+      --parada1-top: 20%;
+      --parada1-left: 25%;
+
+      --parada2-top: 20%;
+      --parada2-left: 50%;
+
+      --parada3-top: 20%;
+      --parada3-left: 76%;
+
+      --actividad-bottom: 35%;
+      --actividad-left: 37.5%;
+
+      --foro-bottom: 35%;
+      --foro-left: 65%;
+
+    }
+
+    /* ==================================================
+       PORTADA
+       ================================================== */
+
+    .portada {
+      height: 100vh;
+  min-height: 100vh;
+      width: 100%;
+      background-image: var(--fondo-desktop);
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* ==================================================
+       ÍCONOS DESKTOP
+       ================================================== */
+
+    .iconos {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .iconos a.icono {
+      position: absolute;
+      text-decoration: none;
+    }
+
+    .iconos img {
+      width: 200px;
+      transition: transform 0.3s ease;
+      filter: drop-shadow(0 2px 6px rgba(0,0,0,0.4));
+    }
+
+    @media (hover: hover) {
+      .iconos img:hover {
+        transform: scale(1.3);
+      }
+    }
+
+    /* ===== posiciones por ícono ===== */
+
+    .icono-orientaciones {
+      top: var(--orientaciones-top);
+      right: var(--orientaciones-right);
+    }
+
+    .icono-parada1 {
+      top: var(--parada1-top);
+      left: var(--parada1-left);
+    }
+
+    .icono-parada2 {
+      top: var(--parada2-top);
+      left: var(--parada2-left);
+    }
+
+    .icono-parada3 {
+      top: var(--parada3-top);
+      left: var(--parada3-left);
+    }
+    .icono-actividad {
+      bottom: var(--actividad-bottom);
+      left: var(--actividad-left); 
+    }
+
+    .icono-foro {
+      bottom: var(--foro-bottom);
+      left: var(--foro-left);
+    }
+
+    
+
+    /* ==================================================
+       MOBILE
+       ================================================== */
+
+    @media (max-width: 600px) {
+
+      .portada {
+        background-image: var(--fondo-mobile);
+      }
+
+      .iconos {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        height: auto;
+      }
+
+      .iconos a.icono {
+        position: static;
+      }
+
+      .iconos img {
+        width: 110px;
+        transform: none;
+      }
+
+      /* imágenes mobile */
+        .icono-orientaciones img {
+        content: url("IMAGENES/AA_INFANTIL_Repensar_Paradas_Orientaciones.png");
+      }
+      .icono-parada1 img {
+        content: url("IMAGENES/AA_INFANTIL_Repensar_Paradas_Parada1.png");
+      }
+
+      .icono-parada2 img {
+        content: url("IMAGENES/AA_INFANTIL_Repensar_Paradas_Parada2.png");
+      }
+
+      .icono-parada3 img {
+        content: url("IMAGENES/AA_INFANTIL_Repensar_Paradas_Parada3.png");
+      }
+
+      .icono-actividad img {
+        content: url("IMAGENES/AA_INFANTIL_Repensar_Paradas_Actividad.png");
+      }
+
+      .icono-foro img {
+        content: url("IMAGENES/AA_INFANTIL_Repensar_Paradas_Foro.png");
+      }
+
+    
+    }
+  </style>
+</head>
+
+<body>
+  <!-- CAMBIÁS ESTA CLASE PARA OTRO CURSO -->
+  <div class="portada curso-base">
+    <div class="iconos">
+
+          <a class="icono icono-orientaciones"
+         href="https://isep-cba.edu.ar/campus/mod/page/view.php?id=21595"
+         target="_blank">
+        <img src="IMAGENES/AA_INFANTIL_Repensar_Paradas_Orientaciones.png" alt="Orientaciones">
+
+      <a class="icono icono-parada1"
+         href="https://isep-cba.edu.ar/campus/mod/page/view.php?id=21596"
+         target="_blank">
+        <img src="IMAGENES/AA_INFANTIL_Repensar_Paradas_Parada1.png" alt="parada 1">
+      </a>
+
+      <a class="icono icono-parada2"
+         href="https://isep-cba.edu.ar/campus/mod/page/view.php?id=21597"
+         target="_blank">
+        <img src="IMAGENES/AA_INFANTIL_Repensar_Paradas_Parada2.png" alt="Parada 2">
+      </a>
+
+      <a class="icono icono-parada3"
+         href="https://isep-cba.edu.ar/campus/mod/page/view.php?id=21598"
+         target="_blank">
+        <img src="IMAGENES/AA_INFANTIL_Repensar_Paradas_Parada3.png" alt="Parada 3">
+      </a>
+
+      <a class="icono icono-actividad"
+         href="https://isep-cba.edu.ar/campus/mod/page/view.php?id=21599"
+         target="_blank">
+        <img src="IMAGENES/AA_INFANTIL_Repensar_Paradas_Actividad.png" alt="Punto de encuentro">
+      </a>
+
+      <a class="icono icono-foro"
+         href="https://isep-cba.edu.ar/campus/mod/forum/view.php?id=21601"
+         target="_blank">
+        <img src="IMAGENES/AA_INFANTIL_Repensar_Paradas_Foro.png" alt="Foro">
+      </a>
+    
+    
+    </div>
+  </div>
+</body>
+</html>
